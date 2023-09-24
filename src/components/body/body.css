@@ -1,0 +1,99 @@
+.icon{
+    color: white;
+    background-color: green;
+    border-radius: 50%;
+    font-size: 1.7rem;
+}
+
+.icon-tree{
+    font-size: 1.7rem;
+    background-color: blue;
+    color: white;
+    width: 1.7rem;
+    height: 1.7rem;
+    text-align: center;
+    /* border-radius: 5px; */
+}
+
+.icon-four{
+    font-size: 1.7rem;
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
+    width: 1.7rem;
+    height: 1.7rem;
+    text-align: center;
+}
+
+.img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.descriptionProduct{
+    font-size: 2rem;
+}
+
+li{
+    text-decoration: 'none';
+}
+
+.bold{
+    font-weight: 600;
+}
+
+button{
+    background-color: green;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 10px;
+    border-radius: 2rem;
+}
+
+.colorYellow{
+    color: yellow;
+}
+
+.textUnderline{
+    color: red;
+    text-decoration: underline;
+    text-decoration-color: rgba(254, 16, 32, 0.5);;
+    /* text-decoration: 'underline'; */
+    /* text-decoration-color: rgba(254, 16, 32,0.5); */
+    text-align: center;
+}
+
+.imgQuality{
+    border-radius: 2rem;
+    width: 88px;
+    height: 88px;
+}
+ul{
+    gap: '20px';
+}
+
+li{
+    padding: 10px;
+}
+
+.mainImage{
+    border-radius: '30px';
+    padding: '10px';
+    width: 100%;
+}
+@media only screen and (max-width: 1024px){
+    .mainImage{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .mainImage{
+        
+    }
+}
