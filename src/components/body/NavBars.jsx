@@ -21,7 +21,7 @@ const Wrapper = styled.div`
   @media (max-width: 1024px) {
     height: 80px;
   }
-  @media (max-width: 1024px) {
+  @media (max-width: 600px) {
     height: 100px;
   }
 `;
@@ -49,6 +49,8 @@ const Content = styled.div`
   @media (max-width: 600px) {
     margin-top: 10px;
     justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 `;
 
@@ -107,9 +109,9 @@ export const NavSteps = () => {
         <BsCheck className="icon" />
         <spam> Step 2: </spam> Checkout
       </Content>
-      <Content>
+      <Content style={{fontWeight: '600'}}>
         <div className="icon icon-tree">3</div>
-        <spam> Step 3: </spam> Special Offer
+        <spam style={{fontWeight: '600'}}> Step 3: </spam > Special Offer
       </Content>
       <Content>
         <div className="icon icon-four">4</div> <spam> Step 4: </spam>

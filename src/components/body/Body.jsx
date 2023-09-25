@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { NavSteps, Payment } from "./NavSteps";
+import { NavSteps, Payment } from "./NavBars";
 import mainImage from "../../assets/mainImage.png";
 import descriptionImage from "../../assets/descriptionImage.png";
 import imageProfile from "../../assets/imageProfile.png";
@@ -15,8 +15,14 @@ import {
 } from "react-icons/ai";
 
 const Container = styled.div`
-  height: 130vh;
+  height: 120vh;
   width: 100%;
+  @media(max-width: 1024px){
+    height: 85vh;
+  }
+  @media(max-width: 600px){
+    height: 130vh;
+  }
 `;
 const BigWrapper = styled.div`
   padding: 10px 20px;
@@ -25,24 +31,31 @@ const BigWrapper = styled.div`
   width: 80%;
   justify-content: center;
   margin: 0 auto;
-
+  
+  @media(max-width: 1024px){
+    height: 55vh;
+  }
+  
   @media(max-width: 600px){
     display: block;
-    // flex-direction: column;
   }
+  
   
 `;
 const SmallWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  height: 30vh;
+  height: 15vh;
   width: 80%;
   background-color: green;
 
+  @media(max-width: 1024px){
+    height: 10vh;
+  }
+
   @media(max-width: 600px){
     display: none;
-    // flex-direction: column;
   }
 `;
 const Description = styled.p`
@@ -178,7 +191,7 @@ const Body = () => {
             <AiOutlinePercentage style={{backgroundColor: 'blue', color: "white", borderRadius: '50%', fontSize: '1.7rem'}} />
             Save 53% and get 6 extra Clarifision for only $14 Each.
           </ContainerSmallDescription>
-          <button>
+          <button >
             YES - CLAIM MY DISCOUNT{" "}
             <AiOutlineArrowRight style={{ color: "white", cursor: "pointer" }} />
           </button>

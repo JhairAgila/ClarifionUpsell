@@ -23,9 +23,7 @@ const ContainerFontWhite = styled.div`
   width: 100%;
   @media (max-width: 1024px) {
     margin-top: 10px;
-  }
-
-  
+  }  
 `;
 
 const Wrapper = styled.div`
@@ -73,7 +71,20 @@ const Left = styled.div`
   flex: 1;
   display: flex;
   align-items: center;
-  margin-left: 5px;
+  margin-left: var(--margin-left);
+
+  @media (max-width: 1024px){
+    margin-left: 4rem;
+    img{
+      width: 50%;
+    }
+  }
+  @media (max-width: 600px){
+    margin-left: 1rem;
+    img{
+      width: 70%;
+    }
+  }
 `;
 const Right = styled.div`
   flex: 1;
@@ -81,6 +92,18 @@ const Right = styled.div`
   align-items: center;
   justify-content: flex-end;
   margin-right: 3.3rem;
+
+  @media (max-width: 1024px){
+    img{
+      width: 90%;
+      margin-left: 6rem;
+    }
+  }
+  @media (max-width: 600px){
+    img{
+      width: 100%;
+    }
+  }
 `;
 
 const Header = () => {
