@@ -1,0 +1,37 @@
+.containerSlider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* Ajusta esto según tus necesidades */
+    margin: 0 auto;
+    /* Centra horizontalmente el contenido en el contenedor */
+}
+
+.containerSlider button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.containerSlider span {
+    /* flex: 1; */
+    display: inline-block;
+    /* Esto hace que el texto en el medio ocupe todo el espacio disponible */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+        /* Ajusta esto para controlar el ancho del párrafo */
+    margin: 0 auto;
+    /* Centra horizontalmente el párrafo */
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}

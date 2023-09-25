@@ -27,10 +27,10 @@ const BigWrapper = styled.div`
   margin: 0 auto;
 
   @media(max-width: 600px){
-    flex-direction: column;
+    display: block;
+    // flex-direction: column;
   }
   
-
 `;
 const SmallWrapper = styled.div`
   display: flex;
@@ -39,6 +39,11 @@ const SmallWrapper = styled.div`
   height: 30vh;
   width: 80%;
   background-color: green;
+
+  @media(max-width: 600px){
+    display: none;
+    // flex-direction: column;
+  }
 `;
 const Description = styled.p`
   color: var(--color-p);
@@ -53,10 +58,8 @@ const ContentImage = styled.div`
 
   @media(max-width: 600px){
     display: flex;
-    grid-template-columns: 1fr;
+    width: 100%;
   }
-
-
 
 `;
 
@@ -113,14 +116,14 @@ const ContainerSmallDescription = styled.div`
   gap: 10px;
 `;
 
-const ContainerCommentDescriptionColumn = styled.div`  padding: 10px;
+const ContainerCommentDescriptionColumn = styled.div`
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   margin: 0;
   padding: 0;
-
 `;
 
 const Body = () => {
@@ -132,6 +135,14 @@ const Body = () => {
       </Description>
       <NavSteps />
       <BigWrapper>
+        <p className="descriptionProducton600pxscreen">
+            <spam style={{ color: "blue" }}>ONE TIME ONLY </spam>
+            <spam style={{ color: "black" }}>
+              Special Price for 6 Extra Clarifon For Only
+            </spam>
+            <spam style={{ color: "blue" }}>$14 Each</spam>{" "}
+            <spam style={{ color: "black" }}> ($84.00 Total) </spam>
+          </p>
         <ContentImage>
           <img src={mainImage} width='100%' className="mainImage"/>
         </ContentImage>
@@ -169,7 +180,7 @@ const Body = () => {
           </ContainerSmallDescription>
           <button>
             YES - CLAIM MY DISCOUNT{" "}
-            <AiOutlineArrowRight style={{ color: "white" }} />
+            <AiOutlineArrowRight style={{ color: "white", cursor: "pointer" }} />
           </button>
           <Payment />
         </ContentDescription>

@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.css";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { BsPatchCheck, BsTruck } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
 import { GiReturnArrow } from "react-icons/gi";
 import ClarifionLogo from "../../assets/ClarifionLogo.png";
 import logoRight from "../../assets/logoRight.png";
+import Slider from './Slider';
 
 const Container = styled.div`
   height: 90px;
@@ -23,12 +24,8 @@ const ContainerFontWhite = styled.div`
   @media (max-width: 1024px) {
     margin-top: 10px;
   }
+
   
-  @media (max-width: 600px) {
-    margin-top: 10px;
-    align-items: center;
-    justify-content: center;
-  }
 `;
 
 const Wrapper = styled.div`
@@ -45,6 +42,31 @@ const Content = styled.div`
   justify-content: center;
   color: white;
   gap: 10px;
+
+  ${(props) => 
+  props.slider && 
+  css`
+    display: none;
+  `}
+
+  @media (max-width: 1024px){
+    display: none;
+    ${(props) => 
+    props.slider && 
+  css`
+      display: flex;
+  `}
+  }
+
+  @media (max-width: 600px){
+    display: none;
+
+    ${(props) => 
+    props.slider && 
+  css`
+      display: flex;
+  `}
+  }
 `;
 
 const Left = styled.div`
@@ -62,10 +84,15 @@ const Right = styled.div`
 `;
 
 const Header = () => {
+
+
   return (
     <Container>
       <ContainerFontBlack>
         <Wrapper>
+          <Content slider>
+            <Slider/>
+          </Content>
           <Content>
             <BsPatchCheck />
             30-DAY SATISFACTION GUARANTEE
